@@ -20,7 +20,7 @@ export function renderImages(images) {
         downloads,
       }) => {
         return `<li class="card">
-        <a href="${largeImageURL}">
+        <a class="list" href="${largeImageURL}">
           <img src="${webformatURL}" alt="${tags}">
         </a>
         <ul class="info-list">
@@ -54,6 +54,11 @@ export function renderImages(images) {
   });
   
   lightbox.refresh();
+}
+
+export function clearImages() {
+const galleryList = document.getElementById('gallery');
+galleryList.innerHTML = "";
 }
 
 export function showErrorMessage(message) {
